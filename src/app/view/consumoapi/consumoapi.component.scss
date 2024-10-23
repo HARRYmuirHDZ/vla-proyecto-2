@@ -1,0 +1,24 @@
+// src/app/components/tabla-paises/tabla-paises.component.scss
+
+.container {
+    max-width: 800px; // Limita el ancho de la tabla
+    margin: auto; // Centra el contenedor
+}
+
+.input-group {
+    margin-bottom: 1.5rem; // Espacio entre el campo de búsqueda y la tabla
+}
+
+.table {
+    border: 1px solid #dee2e6; // Añade un borde a la tabla
+}
+
+.thead-dark th {
+    background-color: #343a40; // Color de fondo del encabezado
+    color: white; // Color del texto en el encabezado
+}
+
+.btn-primary {
+    background-color: #007bff; // Color de fondo del botón
+    border-color: #007bff; // Color del borde del botón
+}

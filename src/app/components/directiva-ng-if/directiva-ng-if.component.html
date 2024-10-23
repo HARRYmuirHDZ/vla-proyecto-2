@@ -1,0 +1,17 @@
+<div class="container">
+    <div style="background-color: rgb(143, 133, 255);">
+        <h1>Directivas ngIF</h1>
+        <h3>Seleccione un país</h3>
+        <select class="form-control" [(ngModel)]="Nacionalidad">
+            <option value="1">Costa Rica</option>
+            <option value="2">Otro</option>
+        </select>
+        <br>
+        <div *ngIf="Nacionalidad === '1'">
+            <h5>La persona es nacional</h5>
+        </div>
+        <div *ngIf="Nacionalidad != '1'">
+            <h5>La persona es extranjera</h5>
+        </div>
+    </div>
+</div>

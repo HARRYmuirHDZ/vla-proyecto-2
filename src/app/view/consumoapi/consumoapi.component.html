@@ -1,0 +1,17 @@
+<div class="container">
+    <h1>Estos son los paises registrados en nuestra base de datos</h1>
+    <table class="table">
+        <thead>
+            <th>Codigo Pais</th>
+            <th>Nombre del Pais</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let pais of vectorPaises">
+                <td>{{ pais.id }}</td>
+                <td>{{ pais.nombre }}</td>
+                <td>{{ pais.capital }}</td>
+                <td>{{ pais.moneda }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

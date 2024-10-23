@@ -1,0 +1,84 @@
+<div class="container">
+    <h1>Mantenimiento de ususarios</h1>
+    <input class="form-control"
+            placeholder="Digite el nombre"
+            [(ngModel)]="nombrePersona">
+            <div class="d-flex justify-content-end">
+                <span *ngIf="mostrarMensajeError" style="color: red;">Campo Requerido</span>
+            </div>
+    <br>
+    <input class="form-control"
+            placeholder="Digite el correo"
+            [(ngModel)]="correoPersona">
+            <div class="d-flex justify-content-end">
+                <span *ngIf="mostrarMensajeError" style="color: red;">Campo Requerido</span>
+            </div>
+    <br>
+    <input class="form-control"
+            placeholder="Digite el nombre usuario"
+            [(ngModel)]="userNamePersona">
+            <div class="d-flex justify-content-end">
+                <span *ngIf="mostrarMensajeError" style="color: red;">Campo Requerido</span>
+            </div>
+    <br>
+    <input class="form-control"
+            placeholder="Digite el password"
+            [(ngModel)]="passwordPersona">
+            <div class="d-flex justify-content-end">
+                <span *ngIf="mostrarMensajeError" style="color: red;">Campo Requerido</span>
+            </div>
+    <br>
+    <button class="btn btn-success"  (click)="AbrirModal(ContenedorGuardarPersona)">Guardar</button>
+    
+    <table class="table">
+        <thead>
+            <th>Nombre</th>
+            <th>Correo</th>
+            <th>UserName</th>
+            <th>PassWord</th>
+            <th>Acciones</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let persona of vectorPersonas; let i = index">
+                <td>{{persona.nombre}}</td>
+                <td>{{persona.correo}}</td>
+                <td>{{persona.userName}}</td>
+                <td>{{persona.passWord}}</td>
+                <td>
+                    <button class="btn btn-danger" (click)="EliminarPersona(i)">Eliminar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <ng-template #ContenedorGuardarPersona let-modal>
+        <div class="modal-header">
+            <h4 class="modal-title">Registrar Persona</h4>
+        </div>
+        <div class="modal-body">
+            <p>{{nombrePersona}}</p>
+            <p>{{correoPersona}}</p>
+            <p>{{userNamePersona}}</p>
+            <p>{{passwordPersona}}</p>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-danger" (click)="modal.dismiss()">Cancelar</button>
+            <button class="btn btn-danger" (click)="GuardarPersona()">Aceptar</button>
+        </div>
+    </ng-template>
+
+    <ng-template #ContenedorRespuesta let-modal>
+        <div class="modal-header">
+            <h4 class="modal-title">Respuesta del Servicio</h4>
+        </div>
+        <div class="modal-body">
+            <p>{{codigoRespuestaApi}}</p>
+            <p>{{DescripcionRespuestaApi}}</p>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-danger" (click)="modal.dismiss()">Cerrar</button>
+            
+        </div>
+    </ng-template>
+</div>
