@@ -16,6 +16,7 @@ import { DirectivaNgModelDosComponent } from './components/directiva-ng-model-do
 import { DirectivaNgIfComponent } from './components/directiva-ng-if/directiva-ng-if.component';
 import { DirectivaNgIfDosComponent } from './components/directiva-ng-if-dos/directiva-ng-if-dos.component';
 import { TablaPaisesComponent } from './components/tabla-paises/tabla-paises.component';
+import { CarruselComponent } from './components/carrusel/carrusel.component';
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import { TablaPaisesComponent } from './components/tabla-paises/tabla-paises.com
     DirectivaNgIfComponent,
     DirectivaNgIfDosComponent,
     TablaPaisesComponent,
+    CarruselComponent,
 
   ],
   imports: [
