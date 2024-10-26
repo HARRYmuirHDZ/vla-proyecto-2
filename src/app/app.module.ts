@@ -8,6 +8,8 @@ import { DirectivasComponent } from './view/directivas/directivas.component';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
+
+
 import { GeneralComponent } from './view/general/general.component';
 import { ConsumoapiComponent } from './view/consumoapi/consumoapi.component';
 import { FormulariounoComponent } from './view/formulariouno/formulariouno.component';
